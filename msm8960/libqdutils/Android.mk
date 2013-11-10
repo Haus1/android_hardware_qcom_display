@@ -1,4 +1,7 @@
 LOCAL_PATH := $(call my-dir)
+
+ifndef TARGET_QCOM_DISPLAY_VARIANT
+
 include $(LOCAL_PATH)/../common.mk
 include $(CLEAR_VARS)
 
@@ -28,3 +31,4 @@ LOCAL_MODULE_TAGS               := optional
 LOCAL_MODULE                    := libqdMetaData
 include $(BUILD_SHARED_LIBRARY)
 
+endif

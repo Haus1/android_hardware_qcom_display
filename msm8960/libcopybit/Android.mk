@@ -13,6 +13,9 @@
 # limitations under the License.
 
 LOCAL_PATH:= $(call my-dir)
+
+ifndef TARGET_QCOM_DISPLAY_VARIANT
+
 include $(LOCAL_PATH)/../common.mk
 include $(CLEAR_VARS)
 
@@ -41,4 +44,6 @@ else
             include $(BUILD_SHARED_LIBRARY)
         endif
     endif
+endif
+
 endif

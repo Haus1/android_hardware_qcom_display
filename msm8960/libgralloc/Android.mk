@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifndef TARGET_QCOM_DISPLAY_VARIANT
+
 # Gralloc module
 LOCAL_PATH := $(call my-dir)
 include $(LOCAL_PATH)/../common.mk
@@ -43,3 +45,5 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps) $(kernel_deps)
 LOCAL_SRC_FILES               := ionalloc.cpp alloc_controller.cpp
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif

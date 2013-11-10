@@ -1,4 +1,7 @@
 LOCAL_PATH := $(call my-dir)
+
+ifndef TARGET_QCOM_DISPLAY_VARIANT
+
 include $(LOCAL_PATH)/../common.mk
 include $(CLEAR_VARS)
 
@@ -12,3 +15,5 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_SRC_FILES               := external.cpp
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif

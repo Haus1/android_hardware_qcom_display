@@ -2,6 +2,8 @@ LOCAL_PATH := $(call my-dir)
 include $(LOCAL_PATH)/../common.mk
 include $(CLEAR_VARS)
 
+ifndef TARGET_QCOM_DISPLAY_VARIANT
+
 LOCAL_MODULE                  := libgenlock
 LOCAL_MODULE_TAGS             := optional
 LOCAL_C_INCLUDES              := $(common_includes)
@@ -11,3 +13,5 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_SRC_FILES               := genlock.cpp
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif

@@ -1,4 +1,7 @@
 LOCAL_PATH := $(call my-dir)
+
+ifndef TARGET_QCOM_DISPLAY_VARIANT
+
 include $(LOCAL_PATH)/../common.mk
 include $(CLEAR_VARS)
 
@@ -22,3 +25,5 @@ LOCAL_SRC_FILES               := hwc.cpp          \
                                  hwc_qclient.cpp
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
